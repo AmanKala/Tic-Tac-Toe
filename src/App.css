@@ -15,8 +15,9 @@ body {
 h1 {
   text-align: center;
   text-decoration: underline;
-  margin-bottom: 2rem;
-  border: solid 1px white;
+  margin-bottom: 1rem;
+  border-bottom: solid 2px white;
+  padding-bottom: 1rem;
 }
 
 h3 {
@@ -75,12 +76,13 @@ h3 {
 }
 
 .footer {
-  background-color: green;
-  border-top:2px solid red;
+  border-top: solid 1px white;
+  padding: .5rem;
+  text-align: center;
   position: fixed;
   width: 100%;
   bottom: 0;
   color: white;
-  font-size: 25px;
+  font-size: 20px;
  }
  
