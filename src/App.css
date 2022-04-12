@@ -6,18 +6,31 @@
 
 body {
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  background-color: rgb(30, 105, 159);
-  color: white;
+  color: rgb(30, 105, 159);
   min-height: 100vh;
-
+  background-color: #FA8BFF;
+  background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
 }
 
 h1 {
   text-align: center;
-  text-decoration: underline;
   margin-bottom: 1rem;
-  border-bottom: solid 2px white;
-  padding-bottom: 1rem;
+  padding: 1rem;
+  border-bottom: solid 1px white;
+}
+
+.winner-X{
+  font-size: 2rem;
+  font-weight: 900;
+  text-decoration: underline;
+  color: red;
+}
+
+.winner-O{
+  font-size: 2rem;
+  font-weight: 900;
+  text-decoration: underline;
+  color: green;
 }
 
 h3 {
@@ -34,8 +47,8 @@ h3 {
   border: 1rem solid #ffffff;
   border-radius: 10px;
   background: #ffffff;
-  width: 500px;
-  height: 500px;
+  width: 30rem;
+  height: 30rem;
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
   gap: 1rem;
@@ -45,7 +58,7 @@ h3 {
   background: rgb(30, 105, 159);
   border: none;
   border-radius: 10px;
-  font-size: 5rem;
+  font-size: 4rem;
   cursor: pointer;
   outline: none;
 }
@@ -59,13 +72,20 @@ h3 {
   color: white;
 }
 
-.info-wrapper {
-  display: flex;
-  justify-content: space-between;
+.wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.timeline-wrapper {
+  border-left: solid 1px white;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 
-.info-wrapper button {
+.timeline-wrapper button {
   color: white;
   border:solid 2px white ;
   border-radius: 6px;
@@ -75,14 +95,17 @@ h3 {
   margin: .3rem 1rem;
 }
 
+.timeline-wrapper li{
+  list-style:none;
+}
+
 .footer {
-  border-top: solid 1px white;
   padding: .5rem;
   text-align: center;
   position: fixed;
   width: 100%;
   bottom: 0;
   color: white;
-  font-size: 20px;
+  font-size: 1rem;
  }
  

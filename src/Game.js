@@ -42,13 +42,18 @@ const Game = () => {
   return (
     <>
       <h1>Tic Tac Toe </h1>
+      <div className="wrapper">
+      <div>
       <Board squares={history[stepNumber]} onClick={handleClick} />
-      <div className="info-wrapper">
+      </div>
+      <div className="timeline-wrapper">
         <div>
-          <h3>History</h3>
+          <h3>Timeline</h3>
           {allMoves()}
         </div>
-        <h3>{winner ? "Winner: " + winner : "Next Player: " + xO}</h3>
+        <span className={`winner-${winner}`}>{winner ? "Winner: " + winner : " "}</span>
+        <h3>{winner ? "Game Over " : "Next Player: " + xO}</h3>
+      </div>
       </div>
     </>
   );
